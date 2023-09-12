@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+</head>
+<body>
+    <h1>Лабараторна робота №1</h1>
+    <h2>Робота з формами</h2>
+    <h2>Виконала студентка групи КН-32, Беженар Юлія</h2>
+
+    <a href="index.html">На головну</a>
+
+    <h3>Завдання</h3>
+    <p>Необхідно розробити форму для введення результатів поточної сесії у веб-систему. Необхідно заповнити наступні дані:</p>
+    <ul>
+        <li>дані про студента, включають ПІБ, назву групи (вибирається із
+            списку), оцінку за дисципліну (лише ціле значення від 0 до 100), дату
+            проведення заліку або іспиту;</li>
+        <li>дані про залік або іспит, включають назву дисципліни(вибирається
+            із списку), перемикач це залік чи іспит, прізвище викладача.</li>
+    </ul>
+
+    <form action="" method="post">
+        <fieldset>
+            <legend>Студент</legend>
+            <label>ПІБ
+                <input id="student_name" type="text">
+            </label>
+            <label>Група
+                <select>
+                    <option>КН-31</option>
+                    <option>КН-32</option>
+                    <option>АнД-31</option>
+                </select>
+            </label>
+            <label> Оцінка
+                <input id="grade" type="number" min="0" max="100">
+            </label>
+            <label> Дата заліку/екзамену
+                <input id="exam_date" type="date">
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>exam</legend>
+            <label>
+                <select>
+                    <option>Системний аналіз</option>
+                    <option>Філософія</option>
+                    <option>Високопродуктивні обчислення</option>
+                    <option>Непроцедурне програмування</option>
+                    <option>Проектування та розробка веб-застосувань</option>
+                    <option>Штучний інтелект</option>
+                    <option>Технології комп'ютерного проектування</option>
+                </select>
+            </label>
+            <p>Тип іспиту
+                <br>
+                <label>Залік
+                    <input type="radio" name="ispyt" id="zalik">
+                </label>
+                <label>Екзамен
+                    <input type="radio" name="ispyt" id="exam">
+                </label>
+            </p>
+            <label>Прізвище викладача
+                <input id="teacher_name" type="text">
+            </label>
+        </fieldset>
+        <button type="submit">Відправити</button>
+    </form>
+
+
+</body>
+</html>
